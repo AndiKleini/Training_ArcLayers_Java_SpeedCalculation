@@ -25,7 +25,7 @@ public class Main {
         }
 
         // perform calculation
-        float speed = meter / seconds;
+        float speed = (float)meter / (float)seconds;
 
         // persist calculation
         String text = "Speed was calculated from distance-> " + meter + " m and time " + seconds + " secs " + "as " + speed;
