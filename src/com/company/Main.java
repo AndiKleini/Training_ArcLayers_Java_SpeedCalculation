@@ -13,30 +13,8 @@ public class Main {
 
         var inputParameter = readInput();
 
-        // perform calculation
-        float speed = getSpeed(inputParameter.getMeter(), inputParameter.getSeconds());
-
-        // persist calculation
-        String text =
-                        "Speed was calculated from distance-> "
-                        + inputParameter.getMeter() +
-                        " m and time " +
-                        inputParameter.getSeconds() +
-                        " secs "
-                        + "as "
-                        + speed;
-
-        writeToFile(text);
-    }
-
-    private static float getSpeed(float meter, float seconds) {
-        return meter / seconds;
-    }
-
-    private static void writeToFile(String text) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("./out/output.txt"));
-        writer.write(text);
-        writer.close();
+        IProcessSpeedCalculation backendService = getBackendService();
+        backendService.processSpeedCalculation(inputParameter);
     }
 
     private static Integer TryParse(String toParse) {
@@ -60,5 +38,10 @@ public class Main {
             System.out.println("Invalid input ... must be a number.");
         }
         return new InputParameters(meter, seconds);
+    }
+
+    private static IProcessSpeedCalculation getBackendService() {
+        return new ProcessSpeedCalculation(
+                new StoreCalculationResult("./out/output.txt"));
     }
 }

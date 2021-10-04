@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="414a1969-b828-4f45-b202-dbee017ed822" name="Default Changelist" comment="Add float cast for division.">
-      <change afterPath="$PROJECT_DIR$/src/com/company/InputParameters.java" afterDir="false" />
+    <list default="true" id="414a1969-b828-4f45-b202-dbee017ed822" name="Default Changelist" comment="Refactor layers into separate classes.">
+      <change afterPath="$PROJECT_DIR$/src/com/company/IProcessSpeedCalculation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/IStoreCalculationResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/ProcessSpeedCalculation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/StoreCalculationResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
@@ -15,13 +18,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="refactor_layers_as_methods" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1633338539785</updated>
       <workItem from="1633338541441" duration="1000" />
-      <workItem from="1633338871268" duration="8428000" />
+      <workItem from="1633338871268" duration="10710000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1633339006776</created>
@@ -172,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633347208069</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactor layers to single methods.">
+      <created>1633353786599</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1633353786599</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +205,8 @@
     <MESSAGE value="Create first version." />
     <MESSAGE value="Add workspace.xml." />
     <MESSAGE value="Add float cast for division." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add float cast for division." />
+    <MESSAGE value="Refactor layers to single methods." />
+    <MESSAGE value="Refactor layers into separate classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor layers into separate classes." />
   </component>
 </project>
