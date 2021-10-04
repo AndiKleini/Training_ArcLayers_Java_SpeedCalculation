@@ -11,24 +11,29 @@ public class Main {
 	    // please enter input data
         System.out.println("Welcome to the speed calculator.");
 
-        System.out.println("Please enter the distance in meters.");
-        Scanner input = new Scanner(System.in);
-        Integer meter;
-        while ((meter = TryParse(input.next())) == null) {
-            System.out.println("Invalid input ... must be a number.");
-        }
-
-        System.out.println("Please enter the time in seconds.");
-        Integer seconds;
-        while ((seconds = TryParse(input.next())) == null) {
-            System.out.println("Invalid input ... must be a number.");
-        }
+        var inputParameter = readInput();
 
         // perform calculation
-        float speed = (float)meter / (float)seconds;
+        float speed = getSpeed(inputParameter.getMeter(), inputParameter.getSeconds());
 
         // persist calculation
-        String text = "Speed was calculated from distance-> " + meter + " m and time " + seconds + " secs " + "as " + speed;
+        String text =
+                        "Speed was calculated from distance-> "
+                        + inputParameter.getMeter() +
+                        " m and time " +
+                        inputParameter.getSeconds() +
+                        " secs "
+                        + "as "
+                        + speed;
+
+        writeToFile(text);
+    }
+
+    private static float getSpeed(float meter, float seconds) {
+        return meter / seconds;
+    }
+
+    private static void writeToFile(String text) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter("./out/output.txt"));
         writer.write(text);
         writer.close();
@@ -40,5 +45,20 @@ public class Main {
         } catch (NumberFormatException ex) {
             return null;
         }
+    }
+
+    private static InputParameters readInput() {
+        System.out.println("Please enter the distance in meters.");
+        Scanner input = new Scanner(System.in);
+        Integer meter;
+        while ((meter = TryParse(input.next())) == null) {
+            System.out.println("Invalid input ... must be a number.");
+        }
+        System.out.println("Please enter the time in seconds.");
+        Integer seconds;
+        while ((seconds = TryParse(input.next())) == null) {
+            System.out.println("Invalid input ... must be a number.");
+        }
+        return new InputParameters(meter, seconds);
     }
 }
