@@ -14,10 +14,10 @@ Let's do some refactoring in two steps to split up our application into proper l
 
 ## Split up presentation, calculation and storage in dedicated methods
 
-The goal of this first refatoring step is to create dedicated methods for presentation, calculation and storage. 
+The goal of this first refatoring step is creating dedicated methods for presentation, calculation and storage. 
 One can review a proper solution on the branch "refactor_layers_as_methods".
 
 ## Move afore created methods to dedicated classes and apply interfaces
 
-The goal of this second refatoring step is to create dedicated classes for presentation, calculation and storage. Additionally proper interfaces should be defined.
+The goal of this second refatoring step is creating dedicated classes for presentation, calculation and storage. Additionally proper interfaces should be defined.
 One can review a proper solution on the branch "refactor_layers_as_classes".
